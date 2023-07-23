@@ -52,12 +52,23 @@ function previous(){
   <section class="container mx-auto flex items-center flex-col">
         <h1 class="text-center text-2xl py-10">Image carousel</h1>
         <div class="">
-              <div >
-             
-                <img class="cursor-pointer w-full h-48" :src="fullImage" alt="">
-                <button @click="previous()">previous</button>
-                <button @click="next()">next</button>
+
+ 
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mr-8 mb-8" @click="previous()">
+                          <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"/>
+</svg>
+                </button>
+                <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" @click="next()">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 8 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"/>
+                </svg></button>
                 
+            
+              <div>
+             
+                <img class="cursor-pointer w-full h-96 rounded-lg shadow-xl" :src="fullImage" alt="">
+              
             </div>
             
         </div>
